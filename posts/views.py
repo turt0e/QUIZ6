@@ -13,7 +13,7 @@ def create_post(request):
             post.user = request.user  # Associate the post with the current user
             post.save()
             messages.success(request, "Post created successfully!")
-            return redirect('post_list')  # Redirect to the post list view
+            return redirect('posts:post_list')  # Redirect to the post list view
     else:
         form = PostForm()
 
